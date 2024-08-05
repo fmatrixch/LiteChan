@@ -1,4 +1,4 @@
-<title>发送成功</title>
+<title>发送</title>
 <meta charset="utf-8">
 <?php
 ini_set('date.timezone','Asia/Shanghai');
