@@ -1,4 +1,4 @@
-<title>更新成功</title>
+<title>Update successfully</title>
 <meta charset="utf-8">
 <?php
 //↓往里面输入从服务器方所提供的服务器相关信息
@@ -15,10 +15,11 @@ $newname = $_POST['sitenam'];
 $nam = "UPDATE `admin` SET `sitename`='$newname' WHERE 1";
  
 if (mysqli_query($conn, $nam)) {
-    echo "更新成功，<a href='/'>回到首页</a>";
+    echo "Update successfully, <a href='/'>back to homepage/a>";
 } else {
-    echo "错误: " . $nam . "<br>" . mysqli_error($conn);
+    echo "Error: " . $nam . "<br>" . mysqli_error($conn);
 }
  
 mysqli_close($conn);
+
 ?>
