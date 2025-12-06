@@ -1,7 +1,7 @@
-<title>发送</title>
+<title>Sent</title>
 <meta charset="utf-8">
 <?php
-ini_set('date.timezone','Asia/Shanghai');
+ini_set('date.timezone','//Your timezone here');
 //↓往里面输入从服务器方所提供的服务器相关信息
 $servername = "";//服务器host（地址）
 $username = "";//服务器用户名
@@ -19,10 +19,11 @@ $append=$_POST['append'];
 $sql = "INSERT INTO po (post,name,dat,append) VALUES ('$thread','$_POST[name]','$time','$append')";
  
 if (mysqli_query($conn, $sql)) {
-    echo $_POST['name']."在".$time."发送成功，<a href='/'>回到首页</a>";
+    echo $_POST['name']." sent the post successfully at ".$time.". <a href='/'>back to homepage</a>";
 } else {
-    echo "错误: " . $sql . "<br>" . mysqli_error($conn);
+    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
  
 mysqli_close($conn);
 ?>
+
